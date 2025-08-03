@@ -1,0 +1,24 @@
+{
+  "name": "api_node",
+  "version": "1.0.0",
+  "type":"module",
+  "description": "Criação de uma API utilizando Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProfAndersonVanin/api_node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProfAndersonVanin/api_node/issues"
+  },
+  "homepage": "https://github.com/ProfAndersonVanin/api_node#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
