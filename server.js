@@ -6,14 +6,14 @@ const usuarios = []
 
 //Criando uma rota
 
-app.post('/usuarios', (req,res)=>{
+app.post('/cadastro', (req,res)=>{
     //console.log(req)
     usuarios.push(req.body)
     //res.send('OK feito POST')
     res.status(201).json(req.body)
 })
 
-app.get('/usuarios', (req,res)=>{
+app.get('/cadastro', (req,res)=>{
     //res.send('Deu certo!')
     //res.json(usuarios)
     res.status(200).json(usuarios)
