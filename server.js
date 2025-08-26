@@ -4,14 +4,42 @@ import pkg from '@prisma/client'
 const { PrismaClient } = pkg
 const prisma = new PrismaClient()
 
-
-
 const app = express()
 app.use(express.json())
 
-
-
 //Criando uma rota
+
+app.put('/cadastro/:id', async (req,res)=>{
+
+    //console.log(req.params.id)
+    await prisma.usuario.update({
+        where:{
+            id:req.params.id
+        },
+        data:{
+            email: req.body.email,
+            nome: req.body.nome,
+            idade: req.body.idade
+        }
+
+    })
+
+    res.status(201).json({"message":"Usuario Atualizado"})
+})
+
+
+app.delete('/cadastro/:id', async (req,res)=>{
+
+    //console.log(req.params.id)
+    await prisma.usuario.delete({
+        where:{
+            id:req.params.id
+        }
+    })
+
+    res.status(201).json({"message":"Usuario Removido"})
+})
+
 
 app.post('/cadastro',async (req,res)=>{
     
